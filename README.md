@@ -39,7 +39,9 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 
 Some qualitative results for style transfer.
 
+No Augmentation (original images)
 ![No Augmentation](test/test_augmentation_nothing.png)
+Trad+Style augmentation ( ColorJitter, RandomHorizontalFlip, RandomAffine, RandomRotation, RandomErasing)
 ![Trad+Style augmentation](test/test_augmentation_aug.png)
 
 
