@@ -14,10 +14,11 @@ This code is an implementation of the paper [Style Augmentation: Data Augmentati
 - Analyze the noise in the latent domain (uniform and gaussian were tested).
 
 ## Usage
-All parameters are detailed in `main.py` and `config_classification.py`, just download the pretrained model for stylization from [original authors](https://drive.google.com/file/d/1H9T5rfXGlGCUh04DGkpkMFbVnmscJAbs/view) or you can follow the author's procedure to get the model, thereafter move the model into models folder. Finally, run the training code.:
+All parameters are detailed in `main.py` and `config_classification.py`, just download the [wikiArt (training) DB](https://www.kaggle.com/c/painter-by-numbers/data), the pretrained The model for stylization from [original authors](https://drive.google.com/file/d/1H9T5rfXGlGCUh04DGkpkMFbVnmscJAbs/view) or you can follow the author's procedure to get the model, thereafter move the model into models folder. Finally, run the training code.:
 
 
 ```
+python FeatureExtractor.py # To get the feature vectors from WikiArt DB.
 python training.py
 ```
 hyperparameters can be edited in the `config_classification.py`

@@ -18,7 +18,7 @@ import torch.backends.cudnn as cudnn
 from libs.models import encoder3,encoder4
 from libs.models import decoder3,decoder4
 
-os.environ["CUDA_VISIBLE_DEVICES"]="1" # USED ONLY IF OTHER GPUS ARE BEING USED
+os.environ["CUDA_VISIBLE_DEVICES"]="0" # USED ONLY IF OTHER GPUS ARE BEING USED
 if True:
     style_dataset = Dataset('Database/WikiArt/train/',256,256,test=True)
     style_loader_ = torch.utils.data.DataLoader(dataset     = style_dataset,
@@ -56,62 +56,60 @@ if True:
     means = np.array(means)
     with open('features.p', 'wb') as handle:
         pickle.dump([features, means], handle, protocol=pickle.HIGHEST_PROTOCOL)
-    xxx
+
+if False: # For analysis
+    # Open - Load - Analysis
+    with open('features.p', 'rb') as handle:
+        features = pickle.load(handle)[0]
+    print(features.shape)
+
+    ########################
+    ########################
+    # This visulization is performed to understand the feature-level information after stylization.
+    ########################
+    ########################
+    # T-sne takes a long time to finish.
+
+    embedding0 = PCA(n_components=50)
+    z_o = embedding0.fit_transform(features)
+    print(z_o.shape)
+    # embedding1 = TSNE(n_components=2, n_iter=500).fit_transform(features)
+    # z1 = embedding1.fit_transform(pca_result_50[rndperm[:n_sne]])
+    # print(z1.shape)
+    z2 = TSNE(n_components=2, n_iter=500, verbose=1).fit_transform(z_o)
+    print(z2.shape)
+    z3 = TSNE(n_components=1, n_iter=500, verbose=1).fit_transform(z_o)
+    print(z3.shape)
+    with open('features_50_2D.p', 'wb') as handle:
+        pickle.dump(z2, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    with open('features_50_1D.p', 'wb') as handle:
+        pickle.dump(z3, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+    embedding0 = PCA(n_components=100)
+    z_o = embedding0.fit_transform(features)
+    print(z_o.shape)
+    z2 = TSNE(n_components=2, n_iter=1000, verbose=1).fit_transform(z_o)
+    print(z2.shape)
+    z3 = TSNE(n_components=1, n_iter=1000, verbose=1).fit_transform(z_o)
+    print(z3.shape)
+    with open('features_100_2D.p', 'wb') as handle:
+        pickle.dump(z2, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    with open('features_100_1D.p', 'wb') as handle:
+        pickle.dump(z3, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-
-# Open - Load - Analysis
-with open('features.p', 'rb') as handle:
-    features = pickle.load(handle)[0]
-print(features.shape)
-
-########################
-########################
-# This visulization is performed to understand the feature-level information after stylization.
-########################
-########################
-# T-sne takes a long time to finish.
-
-embedding0 = PCA(n_components=50)
-z_o = embedding0.fit_transform(features)
-print(z_o.shape)
-# embedding1 = TSNE(n_components=2, n_iter=500).fit_transform(features)
-# z1 = embedding1.fit_transform(pca_result_50[rndperm[:n_sne]])
-# print(z1.shape)
-z2 = TSNE(n_components=2, n_iter=500, verbose=1).fit_transform(z_o)
-print(z2.shape)
-z3 = TSNE(n_components=1, n_iter=500, verbose=1).fit_transform(z_o)
-print(z3.shape)
-with open('features_50_2D.p', 'wb') as handle:
-    pickle.dump(z2, handle, protocol=pickle.HIGHEST_PROTOCOL)
-with open('features_50_1D.p', 'wb') as handle:
-    pickle.dump(z3, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-embedding0 = PCA(n_components=100)
-z_o = embedding0.fit_transform(features)
-print(z_o.shape)
-z2 = TSNE(n_components=2, n_iter=1000, verbose=1).fit_transform(z_o)
-print(z2.shape)
-z3 = TSNE(n_components=1, n_iter=1000, verbose=1).fit_transform(z_o)
-print(z3.shape)
-with open('features_100_2D.p', 'wb') as handle:
-    pickle.dump(z2, handle, protocol=pickle.HIGHEST_PROTOCOL)
-with open('features_100_1D.p', 'wb') as handle:
-    pickle.dump(z3, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    with open('features_100_1D.p', 'rb') as handle:
+        f1 = pickle.load(handle)
+    print(f1.shape)
+    # import os
+    # os.environ['QT_QPA_PLATFORM']='offscreen'
+    # import matplotlib.pyplot as plt
+    # plt.hist(f1, bins=1000, color='r')
+    # plt.show()
 
 
-with open('features_100_1D.p', 'rb') as handle:
-    f1 = pickle.load(handle)
-print(f1.shape)
-# import os
-# os.environ['QT_QPA_PLATFORM']='offscreen'
-# import matplotlib.pyplot as plt
-# plt.hist(f1, bins=1000, color='r')
-# plt.show()
-
-
-# # plt.scatter(z1[:,0], z1[:,1], color='r')
-# plt.scatter(z2[:,0], z2[:,1], color='g')
-# plt.xlabel('X1')
-# plt.ylabel('X2')
-# plt.show()
+    # # plt.scatter(z1[:,0], z1[:,1], color='r')
+    # plt.scatter(z2[:,0], z2[:,1], color='g')
+    # plt.xlabel('X1')
+    # plt.ylabel('X2')
+    # plt.show()
