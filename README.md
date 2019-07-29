@@ -14,13 +14,9 @@ This code is an implementation of the paper [Style Augmentation: Data Augmentati
 - Analyze the noise in the latent domain (uniform and gaussian were tested).
 
 ## Usage
-All parameters are detailed in `main.py` and `config_classification.py`, just download the pretrained model from [original authors](https://drive.google.com/file/d/1H9T5rfXGlGCUh04DGkpkMFbVnmscJAbs/view) and run:
+All parameters are detailed in `main.py` and `config_classification.py`, just download the pretrained model for stylization from [original authors](https://drive.google.com/file/d/1H9T5rfXGlGCUh04DGkpkMFbVnmscJAbs/view) or you can follow the author's procedure to get the model, thereafter move the model into models folder. Finally, run the training code.:
 
-```
-mkdir models
-cd models
-```
-move the models into this folder. Finally, run the training code.
+
 ```
 python training.py
 ```
