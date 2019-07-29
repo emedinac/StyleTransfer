@@ -14,9 +14,15 @@ This code is an implementation of the paper [Style Augmentation: Data Augmentati
 - Analyze the noise in the latent domain (uniform and gaussian were tested).
 
 ## Usage
-All parameters are detailed in `main.py` and `config_classification.py`, just run:
+All parameters are detailed in `main.py` and `config_classification.py`, just download the pretrained model from [original authors](https://drive.google.com/file/d/1H9T5rfXGlGCUh04DGkpkMFbVnmscJAbs/view) and run:
+
 ```
-python Main.py
+mkdir models
+cd models
+```
+move the models into this folder. Finally, run the training code.
+```
+python training.py
 ```
 hyperparameters can be edited in the `config_classification.py`
 
@@ -36,5 +42,7 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | InceptionV4|     X     |     X     |      -     |
 
 Some qualitative results for style transfer.
+
+![First test](test/test_augmentation.png)
 
 
