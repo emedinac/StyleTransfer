@@ -8,6 +8,7 @@ This code is an implementation of the paper [Style Augmentation: Data Augmentati
 
 
 ## Personal Targets
+- Unterstand Why texture bias the training as stated in [ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness](https://arxiv.org/abs/1811.12231)
 - Understand the influence between stylization in augmentation and networks that perform this task (I tested and read several style transfer, but this one was the best).
 - Train networks and use a network as data augmenter embedded in torchvision.
 - Understand the incluence of data augmentation in each network and hyperparameter fitting
