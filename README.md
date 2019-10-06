@@ -31,10 +31,10 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | Netwrok    |    Trad   |   Style   |  Accuracy  | 
 | ---------  | --------- | --------- | ---------- |
 | Xception   |           |           |   68.17%   |
-| Xception   |     X     |           |   83.60%   |
-| Xception   |           |     X     |   69.27%   |
+| Xception   |     X     |           |   83.65%   |
+| Xception   |           |     X     |   69.28%   |
 | Xception   |     X     |     X     |      -     |
-| InceptionV4|           |           |   73.54%   |
+| InceptionV4|           |           |   74.08%   |
 | InceptionV4|     X     |           |   86.06%   |
 | InceptionV4|           |     X     |   75.69%   |
 | InceptionV4|     X     |     X     |      -     |
