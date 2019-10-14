@@ -39,7 +39,7 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | InceptionV4|           |     X     |   75.69%   |
 | InceptionV4|     X     |     X     |      -     |
 
-Weights tuned without pre-training are available in the following: [dropbox](https://www.dropbox.com/sh/pui7hla90zvqbjk/AABRxVS8xGjhTbiswi1dTCyVa?dl=0)
+Weights tuned without pre-training are available in the following: [drive](https://1drv.ms/u/s!An2VLi2XqiZkgkyxeSHh2qCuBuVW?e=o1FHYB)
 
 Some qualitative results for style transfer.
 
