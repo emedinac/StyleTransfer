@@ -34,18 +34,18 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | Xception           |     X     |           |   83.65%   |
 | Xception           |           |     X     |   69.21%   |
 | Xception           |     X     |     X     |   82.67%   |
-| `InceptionV3 (299)`|           |           |   79.17%   |
-| `InceptionV3`      |     X     |           |   85.35%   |
-| `InceptionV3`      |           |     X     |   86.49%   |
-| `InceptionV3`      |     X     |     X     |   87.18%   |
+| InceptionV3 (299)  |           |           |   79.17%   |
+| InceptionV3        |     X     |           |   85.35%   |
+| InceptionV3        |           |     X     |   86.49%   |
+| InceptionV3        |     X     |     X     |   87.18%   |
 | InceptionV4 (299)  |           |           |   74.08%   |
 | InceptionV4        |     X     |           |   85.35%   |
 | InceptionV4        |           |     X     |   77.57%   |
 | InceptionV4        |     X     |     X     |   86.28%   |
-| `Xception (256)`   |           |           |   72.14%   |
-| `Xception`         |     X     |           |   86.85%   |
-| `Xception`         |           |     X     |   74.67%   |
-| `Xception`         |     X     |     X     |   86.85%   |
+| Xception (256)     |           |           |   72.14%   |
+| Xception           |     X     |           |   86.85%   |
+| Xception           |           |     X     |   74.67%   |
+| Xception           |     X     |     X     |   86.85%   |
 | WideResNet (96)    |           |           |   77.28%   |
 | WideResNet         |     X     |           |   87.26%   |
 | WideResNet         |           |     X     |   83.58%   |
