@@ -36,10 +36,10 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | Xception           |     X     |     X     |   82.67%   |
 | InceptionV3 (299)  |           |           |   79.17%   |
 | InceptionV3        |     X     |           |   86.49%   |
-| InceptionV3        |           |     X     |   80.51%   |
+| InceptionV3        |           |     X     |   80.52%   |
 | InceptionV3        |     X     |     X     |   87.18%   |
 | InceptionV4 (299)  |           |           |   74.08%   |
-| InceptionV4        |     X     |           |   85.35%   |
+| InceptionV4        |     X     |           |   85.34%   |
 | InceptionV4        |           |     X     |   77.58%   |
 | InceptionV4        |     X     |     X     |   86.28%   |
 | Xception (256)     |           |           |   72.14%   |
@@ -51,7 +51,7 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | WideResNet         |           |     X     |   83.58%   |
 | WideResNet         |     X     |     X     |   87.83%   |
 
-Weights tuned without pre-training are available in the following: [drive](https://1drv.ms/u/s!An2VLi2XqiZkgkyxeSHh2qCuBuVW?e=o1FHYB). Some other results and configurations will be available soon!. Due to hardware limitations, WideResNet cannot be tested on images with size of 256x256 pixels.
+Weights tuned without pre-training are available in the following: [drive](https://drive.google.com/open?id=1Ig4wKI9yqItb_eBTQUBDvLIl78wDf70T). Some other results and configurations will be available soon!. Due to hardware limitations, WideResNet cannot be tested on images with size of 256x256 pixels.
 
 Some qualitative results for style transfer.
 
