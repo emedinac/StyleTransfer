@@ -36,7 +36,7 @@ Results reported on Xception and InceptionV4 using STL-10 for classfication task
 | Xception           |     X     |     X     |   82.67%   |
 | InceptionV3 (299)  |           |           |   79.17%   |
 | InceptionV3        |     X     |           |   86.27%   |
-| InceptionV3        |           |     X     |   86.49%   |
+| InceptionV3        |           |     X     |   80.51%   |
 | InceptionV3        |     X     |     X     |   87.18%   |
 | InceptionV4 (299)  |           |           |   74.08%   |
 | InceptionV4        |     X     |           |   85.35%   |
