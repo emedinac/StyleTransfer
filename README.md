@@ -3,8 +3,8 @@ This code is an implementation of the paper [Style Augmentation: Data Augmentati
 ](https://arxiv.org/abs/1809.05375). My main contributions here are the following:
 
 - We used Xception and InceptionV4 as classifier networks.
-- We used [Learning Linear Transformations for Fast Image and Video Style Transfer](https://github.com/sunshineatnoon/LinearStyleTransfer) as stylizing network.
-- We trained the styliying net using the r31 and saving the embedded features in the same manner as the original style tranfer paper (however, pretrained methods are available for the stylizing network.
+- We used [Learning Linear Transformations for Fast Image and Video Style Transfer](https://github.com/sunshineatnoon/LinearStyleTransfer) as stylizing network. We changed internal configurations to choose intermediate style stregth and generate randomization in each iteration.
+- We trained the styling net using the r31 and saving the embedded features in the same manner as the original style tranfer paper (however, pretrained methods are available for the stylizing network).
 
 
 ## Personal Targets
